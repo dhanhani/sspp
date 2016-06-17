@@ -2,7 +2,7 @@
  *   Copyright (C) 2006 - 2016 by                                          *
  *      Tarek Taha, KURI  <tataha@tarektaha.com>                           *
  *      Randa Almadhoun   <randa.almadhoun@kustar.ac.ae>                   *
- *                                                                         *
+ *      Ahmed AlDhanhani  <ahmed.aldhanhani@kustar.ac.ae>                                                                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -66,6 +66,8 @@ namespace SSPP
         void   generateRegularGrid(geometry_msgs::Pose gridStartPose, geometry_msgs::Vector3 gridSize, float gridRes);
         void   generateRegularGrid(geometry_msgs::Pose gridStartPose,geometry_msgs::Vector3 gridSize, float gridRes, bool sampleOrientations=false, float orientationRes=360, bool samplesFiltering=false);
         void   connectNodes();
+        void   disconnectNodes(Node * path);
+        void regenerateConnections(Node * path);
         std::vector<geometry_msgs::Point> getConnections();
         std::vector<geometry_msgs::Point> getSearchSpace();
         void getRobotSensorPoses(geometry_msgs::PoseArray& robotPoses, geometry_msgs::PoseArray& sensorPoses);
